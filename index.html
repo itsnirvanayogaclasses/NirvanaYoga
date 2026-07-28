@@ -1,744 +1,1279 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoga Website</title>
-    <!-- Bootstrap CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- iconfy CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
-    <!-- font Awesome CDN -->
-    <script
-      src="https://kit.fontawesome.com/9165fb14cf.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="icon" href="./images/yoga icon img.jpg" />
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <nav
-      class="container navbar navbar-expand-lg d-flex align-items-center p-0"
-    >
-      <!-- Logo Section -->
-      <a class="navbar-brand me-4" href="./index.html"
-        ><img
-          style="max-height: 65px; width: auto"
-          src="./images/logo.jpg"
-          alt=""
-      /></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana Yoga & Wellness</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Reset & Variables based on Logo Palette */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; 
+        }
 
-      <!-- Navigation Links Section -->
-      <div
-        class="collapse navbar-collapse justify-content-center"
-        id="navbarNav"
-      >
-      <div
-      class="collapse navbar-collapse justify-content-center"
-      id="navbarNav"
-    >
-      <ul class="navbar-nav gap-4">
-        <li class="nav-item">
-          <a href="./index.html" class="nav-link active" aria-current="page"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="./pages/morning-walk/classes.html" class="nav-link">Classes</a>
-        </li>
-        <li class="nav-item">
-          <a href="./Instructor/Instructor.html" class="nav-link"
-            >Instructor</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="./pages/blog.html" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item text-decoration-underline">
-          <a href="./contact.us/contact.html" class="nav-link">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-      </div>
-    </nav>
-    
-    <!-- hero section -->
-    <div class="bg-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6" style="margin-top: 110px">
-            <h1>Transform Your Mind and Body with yoga</h1>
-            <p>
-              Join our expert sessions to enhance flexibility, build strength
-              and achieve mental clarity. Whether you’re a beginner or a
-              seasoned practitioner, we have classes tailored just for you.
-            </p>
-            <button
-              type="button"
-              class="btn bg-btn btn-lg text-white px-5"
-              style="margin-top: 65px"
-            >
-              Join Now
-            </button>
-          </div>
-          <div class="col-md-6">
-            <img class="img-fluid" src="./images/hero img.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- second section -->
-    <div class="container">
-      <div class="row">
-        <div class="text-center mt-4">
-          <h1 class="">Yoga Has Countless Benefits</h1>
-        </div>
-        <div class="col-md-3 d-flex justify-content-center mt-5">
-          <div
-            class="card bg-white text-center d-flex align-items-center p-3 w-75 shadow p-3 mb-5 bg-body-tertiary rounded border-0">
-            <img
-              class="img-fluid mb-3"
-              src="./images/pro-1.png"
-              alt="Profile Image"
-              style="max-width: 80px"
-            />
-            <div>
-              <h6>Healthy Life Style</h6>
-              <span
-                >Adopt a healthier routine with yoga that strengthens your body
-                and mind.</span
-              >
-            </div>
-          </div>
-        </div>
+        :root {
+            --primary-color: #3B1842;    /* Deep Lotus Purple */
+            --primary-hover: #29102E;
+            --secondary-color: #D81B60;  /* Vibrant Lotus Pink Accent */
+            --gold-accent: #D4AF37;      /* Gold Wave Accent */
+            --whatsapp-color: #25D366;   /* WhatsApp Green */
+            --whatsapp-hover: #1EBE57;
+            --instagram-color: #E1306C;  /* Instagram Pink */
+            --star-color: #F5A623;
+            --text-dark: #231227;
+            --text-light: #555555;
+            --bg-light: #FAF6FA;
+            --white: #FFFFFF;
+        }
 
-        <div class="col-md-3 d-flex justify-content-center mt-5">
-          <div
-            class="card bg-white text-center d-flex align-items-center p-3 w-75 shadow p-3 mb-5 bg-body-tertiary rounded border-0"
-          >
-            <img
-              class="img-fluid mb-3"
-              src="./images/pro-2.png"
-              alt="Profile Image"
-              style="max-width: 80px"
-            />
-            <div>
-              <h6>Feel Happy & Active</h6>
-              <span
-                >Yoga releases endorphins,helping you stay positive and
-                energized throughout the day.
-              </span>
-            </div>
-          </div>
-        </div>
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
 
-        <div class="col-md-3 d-flex justify-content-center mt-5">
-          <div
-            class="card bg-white text-center d-flex align-items-center p-3 w-75 shadow p-3 mb-5 bg-body-tertiary rounded border-0"
-          >
-            <img
-              class="img-fluid mb-3"
-              src="./images/pro-3.png"
-              alt="Profile Image"
-              style="max-width: 80px"
-            />
-            <div>
-              <h6>Sleep Better</h6>
-              <span
-                >Practice yoga to relax your body, calm your mind and enjoy
-                restful sleep.</span
-              >
-            </div>
-          </div>
-        </div>
+        /* Header / Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-        <div class="col-md-3 d-flex justify-content-center mt-5">
-          <div
-            class="card bg-white text-center d-flex align-items-center p-3 w-75 shadow p-3 mb-5 bg-body-tertiary rounded border-0"
-          >
-            <img
-              class="img-fluid mb-3"
-              src="./images/pro-4.png"
-              alt="Profile Image"
-              style="max-width: 80px"
-            />
-            <div>
-              <h6>Feel Energetic</h6>
-              <span
-                >Boost your energy levels naturally through regular yoga
-                practice, leaving you refreshed.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.8rem 2rem;
+            position: relative;
+        }
 
-    <!-- POPULAR COURSES -->
-    <div class="container">
-      <div class="row mt-4">
-        <div class="text-center">
-          <span>POPULAR COURSES</span>
-          <h3>Pick A Course To Get Started</h3>
-        </div>
-        <div class="text-center mt-3">
-          <!-- First Button: With solid background and white text color -->
-          <button type="button" class="button-custom button-all">All</button>
-  
-          <!-- Remaining Buttons: Transparent background, black text color, border matching first button background -->
-          <button type="button" class="button-custom button-outline">Reduce Stress</button>
-          <button type="button" class="button-custom button-outline">Meditations</button>
-          <button type="button" class="button-custom button-outline">Stretch Mid</button>
-      </div>
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
 
-        <div class="col-md-4 col-lg-3 col-12 mb-3 mt-4 mb-3 mx-auto">
-          <div
-            class="card shadow p-3 mb-5 bg-body-tertiary rounded border-0 mx-auto"
-            style="background-color: white; padding-bottom: 10px"
-          >
-            <img class="img-fluid"
-              src="./images/yoga-1.png"
-              class="card-img-top"
-              alt="..."
-              style="
-                padding: 10px;
-                background-color: #f8f9fa;
-                border-radius: 8px;
-              "
-            />
-            <div class="card-body" style="padding: 10px">
-              <h6 class="card-title text-nowrap">Morning Yoga For Beginners</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                bulk the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
+        .logo-img {
+            height: 55px;
+            width: auto;
+            display: block;
+        }
 
-        <div class="col-md-4 col-lg-3 col-12 mb-3 mt-4 mb-3 mx-auto">
-          <div
-            class="card shadow p-3 mb-5 bg-body-tertiary rounded border-0 mx-auto"
-            style="background-color: white; padding-bottom: 10px"
-          >
-            <img  class="img-fluid"
-              src="./images/yoga-2.png"
-              class="card-img-top"
-              alt="..."
-              style="
-                padding: 10px;
-                background-color: #f8f9fa;
-                border-radius: 8px;
-              "
-            />
-            <div class="card-body" style="padding: 10px">
-              <h6 class="card-title">Healthy Body Yoga</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                bulk the of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 1.8rem;
+        }
 
-        <div class="col-md-4 col-lg-3 col-12 mb-3 mt-4 mb-3 mx-auto">
-          <div
-            class="card shadow p-3 mb-5 bg-body-tertiary rounded border-0 mx-auto"
-            style="background-color: white; padding-bottom: 10px"
-          >
-            <img class="img-fluid"
-              src="./images/yoga-3.png"
-              class="card-img-top"
-              alt="..."
-              style="
-                padding: 10px;
-                background-color: #f8f9fa;
-                border-radius: 8px;
-              "
-            />
-            <div class="card-body" style="padding: 10px">
-              <h6 class="card-title">Yog For Bedtime</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
 
-        <div class="col-md-4 col-lg-3 col-12 mb-3 mt-4 mb-3 mx-auto">
-          <div
-            class="card shadow p-3 mb-5 bg-body-tertiary rounded border-0 mx-auto"
-            style=" background-color: white; padding-bottom: 10px"
-          >
-            <img class="img-fluid"
-              src="./images/yoga-4.png"
-              class="card-img-top"
-              alt="..."
-              style="
-                padding: 10px;
-                background-color: #f8f9fa;
-                border-radius: 8px;
-              "
-            />
-            <div class="card-body" style="padding: 10px">
-              <h6 class="card-title text-nowrap">
-                Total Body Yoga - Deep Stretch
-              </h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                bulk the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- First Session Free -->
-    <div class="second-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6" style="margin-top: 85px">
-            <h1>First Session Free</h1>
-            <p>
-              We are waiting for you in our studio for the first yoga class. Try
-              to change your lifestyle!
-            </p>
-            <button
-              type="button"
-              class="btn bg-btn btn-lg text-white px-5"
-              style="margin-top: 65px"
-            >
-              Start your free trial
-            </button>
-          </div>
-          <div class="col-md-6"></div>
-        </div>
-      </div>
-    </div>
-    <!-- Meet Our Instructor -->
-    <div class="container">
-      <div class="row mt-5">
-        <h1 class="text-center">Meet Our Instructor</h1>
-        <div class="col-md-4 col-lg-3 col-12 mb-3">
-          <div class="card shadow bg-body-tertiary rounded border-0 mt-4 mx-auto" style="">
-            <img class="img-fluid" src="./images/ania.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title text-center">Aina Ali</h5>
-              <p class="card-text text-nowrap">Yoga For Beginners & Relief.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-12 mb-3">
-          <div class="card shadow bg-body-tertiary rounded border-0 mt-4 mx-auto" style="">
-            <img class="img-fluid" src="./images/janifer.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title text-center">Janifer</h5>
-              <p class="card-text">Mindfulness & Expert.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-12 mb-3">
-          <div class="card shadow bg-body-tertiary rounded border-0 mt-4 mx-auto" style="">
-            <img class="img-fluid" src="./images/sara.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title text-center">Sara Malik</h5>
-              <p class="card-text text-nowrap">Specialize Vinyase & Yoga.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-12 mb-3"> 
-          <div class="card shadow bg-body-tertiary rounded border-0 mt-4 mx-auto" style="">
-            <img class="img-fluid" src="./images/zara.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title text-center">Zara Khan</h5>
-              <p class="card-text">Advanced Yoga Trainer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Explore Our Yoga Blogs -->
-    <div class="container">
-      <div class="row">
-        <h1 class="text-center">Explore Our Yoga Blogs</h1>
-        <div
-          class="col-md-4 mt-5"
-          style="position: relative; text-align: center"
-        >
-          <img class="img-fluid"
-            src="./images/benifit-img.png"
-            alt=""
-            style="position: relative; top: -10px"
-          />
-         
-          <div
-            class="card card shadow mb-5 bg-body-tertiary rounded border-0"
-            style="
-              max-width: 80%;
-              margin: 0 auto;
-              padding: 15px;
-              position: relative;
-              top: -40px;
-            "
-          >
-            <!-- Moves the card up more -->
-            <h5>Benefit of Daily Yoga Practice</h5>
-            <p class="text-start d-inline-block">
-              Regular yoga practice stretches and tones the muscles, improve
-              flexibility and range of motion which can reduce the risk of
-              Mindfulness enhances your ability to listen to your body and
-              injuries.
-            </p>
-            <button
-              style="
-                background: none;
-                border: none;
-                color: #007bff;
-                font-size: 16px;
-                cursor: pointer;
-                display: flex;
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .instagram-nav-icon {
+            font-size: 1.2rem;
+            color: var(--instagram-color) !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .instagram-nav-icon:hover {
+            transform: scale(1.15);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger.active span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(59, 24, 66, 0.75), rgba(59, 24, 66, 0.75)), 
+                        url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(216, 27, 96, 0.4);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--gold-accent);
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Classes Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(59, 24, 66, 0.05);
+            border-top: 4px solid var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Schedule Table */
+        .table-container { overflow-x: auto; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(59, 24, 66, 0.05);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f0e8f0;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Pricing Section */
+        .pricing-card {
+            text-align: center;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        /* Gallery Grid Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(59, 24, 66, 0.75);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .gallery-overlay i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold-accent);
+        }
+
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 6px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-caption {
+            color: var(--white);
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .lightbox-close, .lightbox-prev, .lightbox-next {
+            position: absolute;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: color 0.3s;
+        }
+
+        .lightbox-close { top: 20px; right: 35px; }
+        .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+        .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+        .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Class Booking Modal Form Styling */
+        .booking-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(35, 18, 39, 0.8);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .booking-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .booking-modal {
+            background: var(--white);
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            border-top: 5px solid var(--secondary-color);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .booking-modal-overlay.active .booking-modal {
+            transform: translateY(0);
+        }
+
+        .booking-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: #888;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: color 0.3s;
+        }
+
+        .booking-modal-close:hover {
+            color: var(--secondary-color);
+        }
+
+        .booking-modal h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .booking-modal p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            border-color: var(--secondary-color);
+        }
+
+        /* Testimonials Carousel Styling */
+        .testimonials-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 1rem 0 3rem 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 0 1rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(59, 24, 66, 0.05);
+            position: relative;
+            border: 1px solid #f0e8f0;
+        }
+
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4285F4;
+            background-color: #F1F5FE;
+            padding: 4px 12px;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: var(--star-color);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .student-name {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .student-role {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        .carousel-btn.prev { left: 0; }
+        .carousel-btn.next { right: 0; }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: var(--secondary-color);
+            width: 24px;
+            border-radius: 10px;
+        }
+
+        /* Contact & Location Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact-info p { margin-bottom: 1rem; }
+
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-color);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Floating WhatsApp Button Styling */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            background-color: var(--whatsapp-color);
+            color: var(--white);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.1);
+        }
+
+        /* Floating Back to Top Button Styling */
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 2px solid var(--gold-accent);
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-4px);
+            box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+            border-top: 3px solid var(--gold-accent);
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-socials a {
+            color: var(--white);
+            font-size: 1.4rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-socials a:hover {
+            color: var(--gold-accent);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            html { scroll-padding-top: 70px; }
+            .hamburger { display: flex; }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
                 align-items: center;
-                margin-left: 67px;
-              "
-            >
-              Read More
-              <span style="margin-left: 5px"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></span>
-            </button>
-          </div>
-        </div>
+                gap: 1.5rem;
+                padding: 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+            }
 
-        <div
-          class="col-md-4 mt-5"
-          style="position: relative; text-align: center"
-        >
-          <img class="img-fluid"
-            src="./images/mindful-img.png"
-            alt=""
-            style="position: relative; top: -10px"
-          />
-          <!-- Moves the image up slightly -->
-          <div
-            class="card card shadow mb-5 bg-body-tertiary rounded border-0"
-            style="
-              max-width: 80%;
-              margin: 0 auto;
-              padding: 15px;
-              position: relative;
-              top: -40px;
-            "
-          >
-            <!-- Moves the card up more -->
-            <h5>Mindfulness and Meditation</h5>
-            <p class="text-start d-inline-block">
-              Mindfulness and Meditation are <br />
-              effective tools for managing <br />
+            .nav-links.active {
+                max-height: 500px;
+                opacity: 1;
+                padding: 2rem 0;
+            }
 
-              during and after yoga practice. <br />
-              Mindfulness enhances your <br />
-              ability to listen to your body and <br />
-              respond to its needs.
-            </p>
-            <button
-              style="
-                background: none;
-                border: none;
-                color: #007bff;
-                font-size: 16px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                margin-left: 67px;
-              "
-            >
-              Read More
-              <span style="margin-left: 5px"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></span>
+            .hero-content h1 { font-size: 2.2rem; }
+
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 26px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .carousel-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <nav>
+            <a href="#" class="logo-container">
+                <img src="logo.jpg" alt="Nirvana Yoga Logo" class="logo-img">
+            </a>
+            
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-          </div>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#classes" class="nav-link">Classes</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="https://www.instagram.com/nirvanayoga/" target="_blank" rel="noopener noreferrer" class="instagram-nav-icon" aria-label="Visit our Instagram page">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Find Balance & Inner Harmony</h1>
+            <p>Join our daily yoga classes designed for all skill levels to cultivate mind, body, and breath awareness.</p>
+            <button class="btn open-booking-modal" data-plan="Drop-in Pass">Book a Class Pass</button>
         </div>
-        <div
-          class="col-md-4 mt-5"
-          style="position: relative; text-align: center"
-        >
-          <img class="img-fluid"
-            src="./images/best.png"
-            alt=""
-            style="position: relative; top: -10px"
-          />
-        
-          <div
-            class="card card shadow mb-5 bg-body-tertiary rounded border-0"
-            style="
-              max-width: 80%;
-              margin: 0 auto;
-              padding: 15px;
-              position: relative;
-              top: -40px;
-              text-align: center;
-            "
-          >
-            <h5>Mindfulness and Meditation</h5>
-            <p class="text-start d-inline-block">
-              Avocados ,nuts, seeds and olive oil are excellent sources of
-              healthy fats that provide long lasting energy. These fats help
-              keep you full and support brain function essential for your
-              practice.
-            </p>
-            <button
-              style="
-                background: none;
-                border: none;
-                color: #007bff;
-                font-size: 16px;
-                cursor: pointer;
-                display: inline-flex;
-                align-items: center;
-                margin-left: 67px;
-              "
-            >
-              Read More
-              <span style="margin-left: 5px"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></span>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Welcome to Our Studio</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-light);">
+            Whether you are looking to build physical strength, improve flexibility, or find mental peace through guided meditation, our certified instructors provide a welcoming and supportive environment for your personal journey.
+        </p>
+    </section>
+
+    <!-- Classes Offered -->
+    <section id="classes">
+        <h2 class="section-title">Our Classes</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Hatha Yoga</h3>
+                <p>A gentle, foundational practice focusing on static postures, alignment, and conscious breathing techniques.</p>
+                <button class="btn open-booking-modal" data-plan="Hatha Yoga">Book Session</button>
+            </div>
+            <div class="card">
+                <h3>Vinyasa Flow</h3>
+                <p>A dynamic class that seamlessly links movement with breath in a continuous, energetic flow.</p>
+                <button class="btn open-booking-modal" data-plan="Vinyasa Flow">Book Session</button>
+            </div>
+            <div class="card">
+                <h3>Pranayama & Meditation</h3>
+                <p>Dedicated breathing practices and guided mindfulness sessions to calm the nervous system and clear the mind.</p>
+                <button class="btn open-booking-modal" data-plan="Pranayama & Meditation">Book Session</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Schedule -->
+    <section id="schedule">
+        <h2 class="section-title">Weekly Schedule</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday – Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Morning Session</strong></td>
+                        <td>6:00 AM – 9:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evening Session</strong></td>
+                        <td>6:00 PM – 8:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2 class="section-title">Membership Plans</h2>
+        <div class="grid">
+            <div class="card pricing-card">
+                <div>
+                    <h3>Monthly Membership</h3>
+                    <div class="price">₹1,000</div>
+                    <p>Access to daily scheduled sessions.</p>
+                </div>
+               <button class="btn open-booking-modal" data-plan="Monthly Membership">Select Plan</button>
+            </div>
+            <div class="card pricing-card">
+                <div>
+                    <h3>Monthly Membership</h3>
+                    <div class="price">₹1,000</div>
+                    <p>Access to daily scheduled sessions.</p>
+                </div>
+                <button class="btn open-booking-modal" data-plan="Monthly Membership">Select Plan</button>
+            </div>
+            <div class="card pricing-card">
+                <div>
+                    <h3>Quarterly Pass</h3>
+                    <div class="price">₹2,800</div>
+                    <p>Flexible plan valid for 3 full months.</p>
+                </div>
+                <button class="btn open-booking-modal" data-plan="Quarterly Pass">Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery">
+        <h2 class="section-title">Studio & Practice Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80" data-caption="Morning Asana Practice">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Morning Asana Practice">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Morning Asana Practice</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" data-caption="Guided Meditation Session">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Guided Meditation Session">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Guided Meditation</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=1200&q=80" data-caption="Group Vinyasa Flow">
+                <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=600&q=80" alt="Group Vinyasa Flow">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Group Vinyasa Flow</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" data-caption="Outdoor Sunrise Yoga">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Outdoor Sunrise Yoga">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Outdoor Sunrise Yoga</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <img src="" alt="Enlarged photo" class="lightbox-img" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <button class="lightbox-next" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Booking Modal Form -->
+    <div class="booking-modal-overlay" id="bookingModal">
+        <div class="booking-modal">
+            <button class="booking-modal-close" id="closeBookingModal">&times;</button>
+            <h3>Reserve Your Spot</h3>
+            <p>Fill in your details below to book your class session at Nirvana Yoga.</p>
+            <form id="classBookingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNum">Phone Number</label>
+                    <input type="tel" id="phoneNum" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="classSelect">Class / Plan Type</label>
+                    <select id="classSelect" required>
+                        <option value="Monthly Membership">Monthly Membership (₹1,000)</option>
+                        <option value="Quarterly Pass">Quarterly Pass (₹2,800)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preferredDate">Preferred Date</label>
+                    <input type="date" id="preferredDate" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 0.5rem;">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="testimonials-wrapper" id="carousel-wrapper">
+            <button class="carousel-btn prev" id="prev-btn" aria-label="Previous Testimonial">
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
-          </div>
+            <button class="carousel-btn next" id="next-btn" aria-label="Next Testimonial">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-track" id="carousel-track">
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="google-badge">
+                            <i class="fa-brands fa-google"></i> Google Review
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Joining Nirvana Yoga Class was the best decision for my routine. The morning Pranayama and breathing sessions helped relieve my chronic stress and greatly boosted my daily energy."</p>
+                        <div class="student-name">Morning Session Student</div>
+                        <div class="student-role">Pimple Saudagar</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="google-badge">
+                            <i class="fa-brands fa-google"></i> Google Review
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a beginner, I was hesitant about alignment and flexibility. The instructor provides personalized attention to every posture, making learning safe and rewarding."</p>
+                        <div class="student-name">Hatha Yoga Student</div>
+                        <div class="student-role">Pimple Saudagar</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="google-badge">
+                            <i class="fa-brands fa-google"></i> Google Review
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The evening batch is a peaceful sanctuary. It provides a welcoming environment to completely unwind and destress after a demanding day at work."</p>
+                        <div class="student-name">Evening Session Student</div>
+                        <div class="student-role">Pimple Saudagar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots" id="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="text-center">
-      <button type="button" class="btn bg-btn btn-secondary mx-5 px-5">
-        Read More
-      </button>
-    </div>
-    <br />
-    <!-- contact Us section -->
-  
-      <div class="col-md-12 mt-5">
-        <div class="row">
-          <div class="contct-hero">
-            <div class="rowd-flex align-items-center">
-              <div class="mt-5 pt-5">
-                <h1 class="text-center">Contact Information</h1>
-                <p class="text-center">
-                  We’re always here to help! Feel free to reach out for any <br />
-                  assistance or inquiries, and we’ll get beck to you quickly.
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact">
+        <h2 class="section-title">Visit Our Studio</h2>
+        <div class="contact-container">
+            <div class="contact-info card">
+                <h3>Location & Details</h3>
+                <p><strong>Address:</strong> Sairaj Regency Society, Kate Vasti, Pimple Saudagar, Pimpri-Chinchwad, Maharashtra 411002</p>
+                <p><strong>Phone:</strong> +91 70206 52972</p>
+                <p><strong>Hours:</strong> Mon–Fri: 6:00 AM – 9:00 AM, 6:00 PM – 8:00 PM</p>
+                <p style="margin-top: 1rem;">
+                    <strong>Follow Us:</strong> 
+                    <a href="https://www.instagram.com/nirvanayoga/" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-color); text-decoration: none; font-weight: 600; margin-left: 5px;">
+                        <i class="fa-brands fa-instagram"></i> @nirvanayoga
+                    </a>
                 </p>
-                <!-- BUTTON -->
-                <div class="text-center mt-4">
-                  <button
-                    type="button"
-                    class="clr border rounded-4 text-white fw-bold btn-lg px-5 p-3"
-                  >
-                    Contact Us
-                  </button>
-                  <div class="container d-flex justify-content-around mt-5">
-                    <div
-                      class="card rounded-4 highlight-borderr"
-                      style="width: 15rem" 
-                    >
-                      <div class="card-body ">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="50"
-                          height="50"
-                          fill="#005082"
-                          class="bi bi-telephone-plus"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5"
-                          />
-                        </svg>
-                        <p class="card-text fw-bold mt-3">
-                          Call Us <br />
-                          <span class="fw-light">+001298346</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="card rounded-4 highlight-borderr "
-                      style="width: 15rem"
-                    >
-                      <div class="card-body">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="50"
-                          height="50"
-                          fill="#005082"
-                          class="bi bi-envelope"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
-                          />
-                        </svg>
-                        <p class="card-text fw-bold mt-3">
-                          Email Us <br />
-                          <span class="fw-light">Yogastudio@gmail.com</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- CONTEACT FORM -->
-      <div class="container">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-              <div class=" container">
-                <div class="">
-                  <h2 class="mt-5 pt-5">Send Message</h2>
-                  <p>
-                    Thank you for contacting us! You'll hear from us shortly, and
-                    we look forward to helping you.
-                  </p>
-                </div>
-                <form class=" pb-4"id="contactForm">
-                  <label class="mt-2 p-1" for="name">Your Name</label>
-                  <br />
-                  <input
-                    class="w-100 highlight-border rounded-4"
-                    type="text"
-                    id="username"
-                    name="name"
-                  />
-                  <br />
-                  <label class="mt-2 p-1" for="email">Email Address</label>
-                  <br />
-                  <input
-                    class="w-100 highlight-border rounded-4"
-                    type="email"
-                    id="email"
-                    name="email"
-                  />
-                  <br />
-                  <label class="mt-2 p-1" for="phone">Phone Number</label>
-                  <br />
-                  <input
-                    class="w-100 highlight-border rounded-4"
-                    type="tel"
-                    id="mobile"
-                    name="phone"
-                  />
-                  <br />
-                  <label class="mt-2 p-1" for="message">Your Message</label>
-                  <br />
-                  <textarea
-                    class="w-100 highlight-borderr rounded-4"
-                    id="message"
-                    name="message"
-                  ></textarea>
-                  <br />
-                  <button
-                    type="button"onclick="submitForm()"class="clr border rounded-4 text-white fw-bold btn-lg px-5 p-2  mt-2">
-                    Send
-                  </button>
-                </form>
-              </div>
-            </div>
-            <div class="col-md-3"></div>
-          </div>
-        </div>
-      </div>
-  <!-- Footer -->
-  <footer>
-    <div class="col-md-12 container mt-5 pt-5">
-        <div class="row">
-            <div class="col-md-4  text-white">
-              <a href="./index.html"><img style="max-height: 1200px; width: auto"src="./images/logo.jpg"alt=""/></a>
-           <p class="mx-5 ">Empowering individuals to find <br>
-            balance, strength and inner <br>
-            peace through transformative <br>
-            yoga experience.  </p>
-            <div class="mx-5 ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-              </svg>
-            </div>
-            </div>
-            <div class="col-md-6  mt-5 text-white ">
-               <div class="mx-5 px-5">
-                <h5>Quick Links</h5>
-               <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-              </svg>About Us</p>
-               <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-              </svg>clasess</p>
-               <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-              </svg>Our INtrocturce</p>
-               <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-              </svg>Testimonials</p>
-               </div>
-            </div>
-            <div class="col-md-2 mt-5 text-white">
-           <div class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg " width="20" height="20" fill="currentColor" class="bi bi-telephone-forward" viewBox="0 0 16 16">
-                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708"/>
-              </svg> <h5 class="mx-2">Call us</h5>
-           </div>
-                <p>07020652972</p>
-                <div class="d-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                      </svg>
-                    <p class="mx-2  align-items-center">Mail Us</p>
-                </div>
-                <p>its.nirvanayogaclasses@gmail.com
-</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.442981995796!2d73.78912!3d18.60000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfef177da2e9%3A0x1d0e13639e8107a5!2sNirvana%20Yoga%20Class!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
-    </div>
-    <div class="text-white text-center">
-        <p class="p-3">All Content     Copyright Nirvana Yoga Class 2026. All Right Reserved </p>
-    </div>
-  </footer>
-  <script src="./pages/script.js"></script>
-  </body>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917020652972?text=Hello%20Nirvana%20Yoga%2C%20I%20would%20like%20to%20inquire%20about%20yoga%20classes." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Floating Back-to-Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/nirvanayoga/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/917020652972" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <p>&copy; 2026 Nirvana Yoga Class. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Controls -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        const header = document.getElementById('main-header');
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = header.offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const headerHeight = header.offsetHeight;
+
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 20;
+                const sectionHeight = section.offsetHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Booking Modal Script
+        const bookingModal = document.getElementById('bookingModal');
+        const closeBookingModal = document.getElementById('closeBookingModal');
+        const bookingButtons = document.querySelectorAll('.open-booking-modal');
+        const classSelect = document.getElementById('classSelect');
+        const classBookingForm = document.getElementById('classBookingForm');
+
+        bookingButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedPlan = button.getAttribute('data-plan');
+                if (selectedPlan && classSelect) {
+                    classSelect.value = selectedPlan;
+                }
+                bookingModal.classList.add('active');
+            });
+        });
+
+        const hideBookingModal = () => bookingModal.classList.remove('active');
+
+        closeBookingModal.addEventListener('click', hideBookingModal);
+
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) hideBookingModal();
+        });
+
+        classBookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value;
+            alert(`Thank you, ${name}! Your booking request has been submitted. We will contact you shortly.`);
+            classBookingForm.reset();
+            hideBookingModal();
+        });
+
+        // Lightbox Gallery Script
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        let currentGalleryIndex = 0;
+
+        const openLightbox = (index) => {
+            currentGalleryIndex = index;
+            const item = galleryItems[index];
+            lightboxImg.src = item.dataset.src;
+            lightboxCaption.textContent = item.dataset.caption;
+            lightbox.classList.add('active');
+        };
+
+        const closeLightbox = () => lightbox.classList.remove('active');
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => openLightbox(index));
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        lightboxNext.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryItems.length;
+            openLightbox(currentGalleryIndex);
+        });
+
+        lightboxPrev.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+            openLightbox(currentGalleryIndex);
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') lightboxNext.click();
+                if (e.key === 'ArrowLeft') lightboxPrev.click();
+            }
+            if (bookingModal.classList.contains('active')) {
+                if (e.key === 'Escape') hideBookingModal();
+            }
+        });
+
+        // Testimonials Carousel Script
+        const track = document.getElementById('carousel-track');
+        const slides = Array.from(track.children);
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const dotsNav = document.getElementById('carousel-dots');
+        const dots = Array.from(dotsNav.children);
+        const carouselWrapper = document.getElementById('carousel-wrapper');
+
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        const updateCarousel = (index) => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            currentIndex = index;
+        };
+
+        const nextSlide = () => updateCarousel((currentIndex + 1) % slides.length);
+        const prevSlide = () => updateCarousel((currentIndex - 1 + slides.length) % slides.length);
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dotsNav.addEventListener('click', (e) => {
+            const targetDot = e.target.closest('.dot');
+            if (!targetDot) return;
+            updateCarousel(parseInt(targetDot.dataset.index));
+        });
+
+        const startAutoSlide = () => { autoSlideInterval = setInterval(nextSlide, 5000); };
+        const stopAutoSlide = () => clearInterval(autoSlideInterval);
+
+        carouselWrapper.addEventListener('mouseenter', stopAutoSlide);
+        carouselWrapper.addEventListener('mouseleave', startAutoSlide);
+
+        startAutoSlide();
+    </script>
+
+</body>
 </html>
