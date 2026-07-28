@@ -1,64 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nirvana Yoga Class</title>
-<style>
-body {font-family: Arial; margin:0; text-align:center;}
-header {background:#2e7d32; color:white; padding:60px 20px;}
-section {padding:40px 20px;}
-.card {
-  border:1px solid #ddd;
-  margin:10px;
-  padding:20px;
-  border-radius:10px;
-}
-footer {
-  background:#2e7d32;
-  color:white;
-  padding:20px;
-}
-button {
-  background:white;
-  color:#2e7d32;
-  padding:10px 20px;
-  border:none;
-  border-radius:5px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirvana Yoga Classes | Transform Your Mind & Body</title>
+  <style>
+    :root {
+      --primary: #4A6B5D;
+      --accent: #D4A373;
+      --bg-light: #FAEDCD;
+      --text-dark: #2B2D42;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #FEFAE0; color: var(--text-dark); line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: var(--primary); color: white; }
+    nav .logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: white; }
+    nav ul { display: flex; list-style: none; gap: 20px; }
+    nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: var(--accent); }
+    
+    .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 5%; background: #E9EDC9; flex-wrap: wrap; }
+    .hero-text { flex: 1; min-width: 300px; padding-right: 20px; }
+    .hero-text h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 1rem; }
+    .hero-text p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; padding: 12px 24px; background: var(--primary); color: white; text-decoration: none; border-radius: 25px; font-weight: bold; }
+    .btn:hover { background: var(--accent); }
+
+    .features { padding: 4rem 5%; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 2rem; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .card h3 { color: var(--primary); margin-bottom: 10px; }
+
+    footer { background: var(--primary); color: white; padding: 2rem 5%; text-align: center; margin-top: 3rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
 </head>
 <body>
 
-<header>
-<h1>Nirvana Yoga Class</h1>
-<p>Balance Your Body, Mind & Soul</p>
-<button>Book Free Trial Class</button>
-</header>
+  <nav>
+    <a href="index.html" class="logo">🧘 Nirvana Yoga</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="instructor.html">Instructors</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-<section>
-<h2>Our Classes</h2>
-<div class="card">Beginner Yoga</div>
-<div class="card">Power Yoga</div>
-<div class="card">Meditation</div>
-</section>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Transform Your Mind & Body with Yoga</h1>
+      <p>Join our expert-led sessions to enhance flexibility, build strength, and achieve inner mental clarity. Tailored programs for all skill levels.</p>
+      <a href="contact.html" class="btn">Claim Your Free First Class</a>
+    </div>
+  </section>
 
-<section>
-<h2>Schedule</h2>
-<p>Morning Batch: 6 AM - 7 AM</p>
-<p>Evening Batch: 6 PM - 7 PM</p>
-</section>
+  <section class="features">
+    <h2>Countless Health & Mind Benefits</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Healthy Lifestyle</h3>
+        <p>Adopt a sustainable, holistic routine that strengthens both physical and mental well-being.</p>
+      </div>
+      <div class="card">
+        <h3>Feel Active & Energized</h3>
+        <p>Release endorphins and boost overall daily energy levels naturally through breath work and postures.</p>
+      </div>
+      <div class="card">
+        <h3>Deep & Restful Sleep</h3>
+        <p>Calm the nervous system with gentle evening stretches and restorative meditation practices.</p>
+      </div>
+      <div class="card">
+        <h3>Stress & Anxiety Relief</h3>
+        <p>Learn powerful pranayama techniques to manage stress and restore peace of mind.</p>
+      </div>
+    </div>
+  </section>
 
-<section>
-<h2>Contact Us</h2>
-<p>Phone: +91 070206 52972</p>
-<p>Email: its.nirvanayogaclasses@gmail.com</p>
-</section>
-
-<footer>
-© 2026 Nirvana Yoga Class
-</footer>
+  <footer>
+    <p>&copy; 2026 Nirvana Yoga Classes. All Rights Reserved. | <a href="contact.html">Get in Touch</a></p>
+  </footer>
 
 </body>
 </html>
-``
